@@ -32,10 +32,10 @@ we all love to customize to perfection.
 %setup -q
 
 %build
-%make_build
+%make_build PREFIX=%{_prefix} SYSCONFDIR=%{_sysconfdir}
 
 %install
-%make_install PREFIX=%{_prefix}
+%make_install PREFIX=%{_prefix} SYSCONFDIR=%{_sysconfdir}
 
 %files
 %doc RELEASE_NOTES README.md CHANGELOG.md AUTHORS
